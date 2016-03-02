@@ -6,8 +6,8 @@ RUN \
   DEBIAN_FRONTEND=noninteractive apt-get -y install \
     build-essential \
     python \
-    ruby \
-    ruby-dev
+    ruby2.0 \
+    ruby2.0-dev
 
 RUN gem install jekyll --no-ri --no-rdoc
 
