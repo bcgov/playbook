@@ -1,9 +1,21 @@
-FROM troyswanson/jekyll
+FROM ubuntu:trusty
+MAINTAINER sheaphillips <shea.phillips@gmail.com>
 
-ADD . /tmp
+RUN \
+  apt-get update && \
+  DEBIAN_FRONTEND=noninteractive apt-get -y install \
+    build-essential \
+    python \
+    ruby \
+    ruby-dev
 
-RUN gem install rdiscount \
-    && chmod -R 777 /var/log/nginx /var/lib/nginx/ \
-    && chmod 644 /etc/nginx/*
+RUN gem install jekyll --no-ri --no-rdoc
 
-RUN jekyll build --trace -s /tmp -d /usr/share/nginx/html
+ADD .
+
+RUN jekyll build --trace
+
+EXPOSE 4000
+
+CMD ["jekyll serve --no-watch --verbose --skip-initial-build"]
+
