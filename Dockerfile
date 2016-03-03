@@ -9,5 +9,5 @@ RUN cd playbook && bundle install && jekyll build --trace
 
 EXPOSE 4000
 
-CMD ["cd playbook && jekyll serve --no-watch --verbose --skip-initial-build"]
+CMD ["jekyll serve --no-watch --verbose --skip-initial-build -s /playbook"]
 
