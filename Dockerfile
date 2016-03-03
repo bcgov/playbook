@@ -5,9 +5,11 @@ RUN yum -y install nodejs && gem install jekyll --no-ri --no-rdoc
 
 ADD . /playbook
 
-RUN cd playbook && bundle install && jekyll build --trace
+WORKDIR /playbook
+
+RUN bundle install && jekyll build --trace
 
 EXPOSE 4000
 
-CMD ["jekyll serve --no-watch --verbose --skip-initial-build -s /playbook"]
+CMD ["jekyll serve --no-watch --verbose --skip-initial-build"]
 
