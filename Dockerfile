@@ -1,14 +1,5 @@
-FROM ubuntu:wily
+FROM tcnksm/centos-ruby:2.1
 MAINTAINER sheaphillips <shea.phillips@gmail.com>
-
-RUN \
-  apt-get update && \
-  DEBIAN_FRONTEND=noninteractive apt-get -y install \
-    build-essential \
-    python \
-    ruby \
-    ruby-dev \
-    nodejs
 
 RUN gem install jekyll --no-ri --no-rdoc
 
