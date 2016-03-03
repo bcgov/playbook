@@ -5,7 +5,7 @@ RUN gem install jekyll --no-ri --no-rdoc
 
 ADD . .
 
-RUN jekyll build --trace
+RUN bundle install && jekyll build --trace
 
 EXPOSE 4000
 
