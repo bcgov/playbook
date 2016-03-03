@@ -1,14 +1,5 @@
-FROM ubuntu:trusty
+FROM ruby:2.2.4-alpine
 MAINTAINER sheaphillips <shea.phillips@gmail.com>
-
-RUN \
-  apt-get update && \
-  DEBIAN_FRONTEND=noninteractive apt-get -y install \
-    build-essential \
-    python \
-    ruby2.0 \
-    ruby2.0-dev \
-    nodejs
 
 RUN gem install jekyll --no-ri --no-rdoc
 
