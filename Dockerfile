@@ -1,7 +1,7 @@
 FROM tcnksm/centos-ruby:2.1
 MAINTAINER sheaphillips <shea.phillips@gmail.com>
 
-RUN gem install jekyll --no-ri --no-rdoc
+RUN yum -y install nodejs && gem install jekyll --no-ri --no-rdoc
 
 ADD . .
 
