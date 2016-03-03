@@ -7,7 +7,7 @@ COPY Gemfile* /playbook/
 
 WORKDIR /playbook
 
-RUN bundle update && bundle install
+RUN bundle install
 
 ADD . /playbook
 
