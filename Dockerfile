@@ -7,7 +7,8 @@ RUN \
     build-essential \
     python \
     ruby2.0 \
-    ruby2.0-dev
+    ruby-dev \
+    nodejs
 
 RUN gem install jekyll --no-ri --no-rdoc
 
