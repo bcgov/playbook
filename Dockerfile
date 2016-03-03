@@ -3,7 +3,7 @@ MAINTAINER sheaphillips <shea.phillips@gmail.com>
 
 RUN gem install jekyll --no-ri --no-rdoc
 
-ADD .
+ADD . .
 
 RUN jekyll build --trace
 
