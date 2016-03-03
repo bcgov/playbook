@@ -3,11 +3,11 @@ MAINTAINER sheaphillips <shea.phillips@gmail.com>
 
 RUN yum -y install nodejs && gem install jekyll --no-ri --no-rdoc && mkdir /playbook
 
-COPY Gemfile /playbook/
+COPY Gemfile? /playbook/
 
 WORKDIR /playbook
 
-RUN bundle install
+RUN bundle update && bundle install
 
 ADD . /playbook
 
