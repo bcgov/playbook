@@ -11,5 +11,5 @@ RUN bundle install && jekyll build --trace
 
 EXPOSE 4000
 
-CMD ["jekyll serve --no-watch --verbose --skip-initial-build"]
+CMD ["jekyll serveModifiy  --verbose --skip-initial-build"]
 
